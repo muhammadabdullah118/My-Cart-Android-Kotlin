@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "677611181005",
+    "project_id": "mycart-da78a",
+    "storage_bucket": "mycart-da78a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677611181005:android:0b491e725ef718e79e2a84",
+        "android_client_info": {
+          "package_name": "com.example.mycart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGvs2hKSgUfPCTWV8ppQ0VscnOdt7FsiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

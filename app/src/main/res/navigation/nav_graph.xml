@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.mycart.views.fragments.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.mycart.views.fragments.auth.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_dashBoardCustomerFragment"
+            app:destination="@id/dashBoardCustomerFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardCustomerFragment"
+        android:name="com.example.mycart.views.fragments.customer.DashBoardCustomerFragment"
+        android:label="fragment_dash_board_customer"
+        tools:layout="@layout/fragment_dash_board_customer" >
+        <action
+            android:id="@+id/action_dashBoardCustomerFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_dashBoardCustomerFragment_to_signOutFragment"
+            app:destination="@id/signOutFragment" />
+        <action
+            android:id="@+id/action_dashBoardCustomerFragment_to_customerOrderHistoryFragment"
+            app:destination="@id/customerOrderHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.example.mycart.views.fragments.customer.ItemDetailFragment"
+        android:label="fragment_item_detail"
+        tools:layout="@layout/fragment_item_detail" >
+        <action
+            android:id="@+id/action_itemDetailFragment_to_dashBoardCustomerFragment"
+            app:destination="@id/dashBoardCustomerFragment" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_placeOrderFragment"
+            app:destination="@id/placeOrderFragment" />
+        <argument
+            android:name="item"
+            app:argType="com.example.mycart.model.Item"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signOutFragment"
+        android:name="com.example.mycart.views.fragments.auth.SignOutFragment"
+        android:label="fragment_sign_out"
+        tools:layout="@layout/fragment_sign_out" >
+        <action
+            android:id="@+id/action_signOutFragment_to_dashBoardCustomerFragment"
+            app:destination="@id/dashBoardCustomerFragment" />
+        <action
+            android:id="@+id/action_signOutFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signOutFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeOrderFragment"
+        android:name="com.example.mycart.views.fragments.customer.PlaceOrderFragment"
+        android:label="fragment_place_order"
+        tools:layout="@layout/fragment_place_order" >
+        <action
+            android:id="@+id/action_placeOrderFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_placeOrderFragment_to_dashBoardCustomerFragment"
+            app:destination="@id/dashBoardCustomerFragment" />
+        <argument
+            android:name="item"
+            app:argType="com.example.mycart.model.Item"/>
+    </fragment>
+    <fragment
+        android:id="@+id/adminDashBoardFragment"
+        android:name="com.example.mycart.views.fragments.admin.AdminDashBoardFragment"
+        android:label="fragment_admin_dash_board"
+        tools:layout="@layout/fragment_admin_dash_board" >
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_signOutFragment"
+            app:destination="@id/signOutFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_adminOrdersFragment"
+            app:destination="@id/adminOrdersFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_itemUpdateFragment"
+            app:destination="@id/itemUpdateFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerOrderHistoryFragment"
+        android:name="com.example.mycart.views.fragments.customer.CustomerOrderHistoryFragment"
+        android:label="fragment_customer_order_history"
+        tools:layout="@layout/fragment_customer_order_history" >
+        <action
+            android:id="@+id/action_customerOrderHistoryFragment_to_dashBoardCustomerFragment"
+            app:destination="@id/dashBoardCustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminOrdersFragment"
+        android:name="com.example.mycart.views.fragments.admin.AdminOrdersFragment"
+        android:label="fragment_admin_orders"
+        tools:layout="@layout/fragment_admin_orders" >
+        <action
+            android:id="@+id/action_adminOrdersFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.mycart.views.fragments.admin.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" >
+        <action
+            android:id="@+id/action_addItemFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemUpdateFragment"
+        android:name="com.example.mycart.views.fragments.admin.ItemUpdateFragment"
+        android:label="fragment_item_update"
+        tools:layout="@layout/fragment_item_update" >
+        <action
+            android:id="@+id/action_itemUpdateFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+        <argument
+            android:name="item"
+            app:argType="com.example.mycart.model.Item"/>
+    </fragment>
+</navigation>

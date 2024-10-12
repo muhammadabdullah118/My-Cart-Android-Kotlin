@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyCart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="don_t_have_an_account_signup">
+    <u>Don\'t have an Account? SignUp</u>
+    </string>
+</resources>
